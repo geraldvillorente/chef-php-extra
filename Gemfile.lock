@@ -15,25 +15,22 @@ GEM
       ohai (>= 0.6.0)
       rest-client (>= 1.0.4, < 1.7.0)
       yajl-ruby (~> 1.1)
-    coderay (1.0.8)
     erubis (2.7.0)
-    foodcritic (1.7.0)
+    ffi-yajl (2.6.0)
+      libyajl2 (>= 1.2)
+    foodcritic (16.3.0)
       erubis
-      gherkin (~> 2.11.1)
-      gist (~> 3.1.0)
-      nokogiri (~> 1.5.4)
-      pry (~> 0.9.8.4)
-      rak (~> 1.4)
-      treetop (~> 1.4.10)
-      yajl-ruby (~> 1.1.0)
-    gherkin (2.11.6)
-      json (>= 1.7.6)
-    gist (3.1.1)
+      ffi-yajl (~> 2.0)
+      nokogiri (>= 1.5, < 2.0)
+      rake
+      rufus-lru (~> 1.0)
+      treetop (~> 1.4)
     highline (1.6.15)
     ipaddress (0.8.0)
     json (1.7.7)
-    method_source (0.7.1)
+    libyajl2 (2.1.0)
     mime-types (1.21)
+    mini_portile2 (2.8.6)
     mixlib-authentication (1.3.0)
       mixlib-log
     mixlib-cli (1.3.0)
@@ -46,7 +43,9 @@ GEM
     net-ssh-multi (1.1)
       net-ssh (>= 2.1.4)
       net-ssh-gateway (>= 0.99.0)
-    nokogiri (1.5.6)
+    nokogiri (1.15.6)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     ohai (6.16.0)
       ipaddress
       mixlib-cli
@@ -55,26 +54,24 @@ GEM
       mixlib-shellout
       systemu
       yajl-ruby
-    polyglot (0.3.3)
-    pry (0.9.8.4)
-      coderay (~> 1.0.5)
-      method_source (~> 0.7.1)
-      slop (>= 2.4.4, < 3)
-    rak (1.4)
+    polyglot (0.3.5)
+    racc (1.8.0)
     rake (10.0.3)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    slop (2.4.4)
+    rufus-lru (1.1.0)
     systemu (2.5.2)
-    treetop (1.4.12)
-      polyglot
-      polyglot (>= 0.3.1)
-    yajl-ruby (1.1.0)
+    treetop (1.6.12)
+      polyglot (~> 0.3)
+    yajl-ruby (1.4.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   chef
-  foodcritic
+  foodcritic (>= 4.0.0)
   rake
+
+BUNDLED WITH
+   2.1.4
